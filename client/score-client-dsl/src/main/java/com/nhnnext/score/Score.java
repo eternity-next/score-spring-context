@@ -1,7 +1,5 @@
 package com.nhnnext.score;
 
-import java.util.Scanner;
-
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.RuntimeBeanReference;
 import org.springframework.beans.factory.support.RootBeanDefinition;
@@ -37,24 +35,10 @@ public class Score {
 	public static void main(String [] args) {
 		ApplicationContext context = initializeApplicationContext();
 		
-		Lecture lecture = null;
-		Scanner scanner = new Scanner(System.in);
+		Lecture standardLecture = context.getBean("standardGradeLecture", Lecture.class);
+		System.out.println(standardLecture.grade());
 		
-		try {
-			System.out.print("grader? ");
-			switch(scanner.next()) {
-			case "st":
-				lecture = context.getBean("standardGradeLecture", Lecture.class);
-				break;
-			case "pf":
-				lecture = context.getBean("passFailGradeLecture", Lecture.class);			
-				break;
-			default:
-				return;
-			}
-			System.out.println(lecture.grade());
-		} finally {
-			scanner.close();
-		}
+		Lecture passFailLecture = context.getBean("passFailGradeLecture", Lecture.class);
+		System.out.println(passFailLecture.grade());
 	}
 }

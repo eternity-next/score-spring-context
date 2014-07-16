@@ -1,5 +1,8 @@
 package com.nhnnext.score.scores;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class HttpScoreRepository implements ScoreRepository {
 	public HttpScoreRepository() {
 	}
