@@ -1,28 +1,14 @@
 #Java Web Programming Advanced Week-02
 
-##Homebrew 설치
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+##score-client-xml
+xml을 이용한 application context 설정
 
-##Score Server 실행
-brew install node
+##score-client-dsl
+직접 BeanDefinition을 이용한 application context 설정
 
-cd ./score/server/score-server
+##score-client-scanning
+AnnotationConfigApplicationContext를 이용한 application context 설정
+<context:component-scna>을 이용한 application context 설정
 
-npm start
 
-http://localhost:3000/socres
 
-=> [50,20,70,80,90]
-
-##Java Project Import
-eclipse import -> Existing Maven Project
-
-4개의 폴더 각각 import
-
-./score/client/score-client-01
-
-./score/client/score-client-02
-
-./score/client/score-client-03
-
-./score/client/score-client-04
