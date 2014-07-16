@@ -7,18 +7,18 @@ import com.nhnnext.score.scores.ScoreRepository;
 
 @Component("standardGradeLecture")
 public class Lecture {
-	@Autowired
 	private ScoreRepository scoreRepository;
-	@Autowired
 	private Grader grader;
 	
 	public Lecture() {
 	}
 	
+	@Autowired
 	public void setScoreRepository(ScoreRepository scoreRepository) {
 		this.scoreRepository = scoreRepository;
 	}
 
+	@Autowired
 	public void setGrader(Grader grader) {
 		this.grader = grader;
 	}
