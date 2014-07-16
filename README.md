@@ -11,5 +11,5 @@ AnnotationConfigApplicationContext를 이용한 application context 설정
 
 &lt;context:component-scna&gt;을 이용한 application context 설정
 
-
-
+##score-client-configuration
+@Configuratin, @Bean을 이용한 application context 설정
