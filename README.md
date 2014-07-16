@@ -8,7 +8,8 @@ xml을 이용한 application context 설정
 
 ##score-client-scanning
 AnnotationConfigApplicationContext를 이용한 application context 설정
-<context:component-scna>을 이용한 application context 설정
+
+&lt;context:component-scna&gt;을 이용한 application context 설정
 
 
 
