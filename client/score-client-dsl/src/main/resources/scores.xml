@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="httpScoreRepository" class="com.nhnnext.score.scores.HttpScoreRepository" />
+	
+	<bean id="standardGrader" class="com.nhnnext.score.lecture.StandardGrader" />
+	
+	<bean id="passFailGrader" class="com.nhnnext.score.lecture.PassFailGrader" />
+	
+	<bean id="standardGradeLecture" class="com.nhnnext.score.lecture.Lecture">
+		<constructor-arg ref="standardGrader" />
+		<constructor-arg ref="httpScoreRepository" />
+	</bean>
+	
+	<bean id="passFailGradeLecture" class="com.nhnnext.score.lecture.Lecture">
+		<constructor-arg ref="passFailGrader" />
+		<constructor-arg ref="httpScoreRepository" />
+	</bean>
+</beans>
