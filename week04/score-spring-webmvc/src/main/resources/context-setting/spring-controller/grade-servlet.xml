@@ -13,6 +13,8 @@
     
 	<bean name="/grade" class="com.nhnnext.score.web.spring.GradeController"
 		p:lecture-ref="standardGradeLecture" />
+
+	<bean name="/naver" class="com.nhnnext.score.web.spring.NaverRedirectController" />
  		
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
